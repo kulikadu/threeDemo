@@ -4,9 +4,9 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 // import App from './App.vue'
-// import App from './views/ThreeDemo2.vue'
+import App from './views/ThreeDemo2.vue'
 // import App from './views/demo.vue'
-import App from './views/Home.vue'
+// import App from './views/Home.vue'
 import router from './router'
 
 const app = createApp(App)

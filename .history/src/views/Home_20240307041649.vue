@@ -1,9 +1,13 @@
 <template>
-  <div class="container">
-    <div class="demo">
+  <!-- <router-link to="/threeDemo">ThreeDemo</router-link>
+    <router-link to="/demo">demo</router-link> -->
+  <!-- <router-view></router-view> -->
+  <RouterView />
+  <div class="flex-1 container">
+    <div>
       <ThreeDemo />
     </div>
-    <div class="demo2">
+    <div>
       <ThreeDemo2 />
     </div>
   </div>
@@ -20,22 +24,7 @@ import ThreeDemo2 from './ThreeDemo2.vue';
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* border: 1px solid red; */
-  border-radius: 30px;
-  /* padding: 30px; */
-}
-
-.demo {
-  width: 50%;
-  height: 100%;
-  margin: 20px 10px 20px 20px;
-}
-
-.demo2 {
-  width: 50%;
-  height: 100%;
-  margin: 20px 20px 20px 10px;
 }
 </style>

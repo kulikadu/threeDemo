@@ -19,23 +19,33 @@ import ThreeDemo2 from './ThreeDemo2.vue';
 .container {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* flex: 1 1 auto; */
+  /* flex-direction: column; */
+  /* justify-content: center;
+  align-items: center; */
   /* border: 1px solid red; */
   border-radius: 30px;
   /* padding: 30px; */
 }
 
 .demo {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  margin: 20px 10px 20px 20px;
+  /* width: 500px;
+  height: 500px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }
 
 .demo2 {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  margin: 20px 20px 20px 10px;
+  /* width: 500px;
+  height: 500px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }
 </style>

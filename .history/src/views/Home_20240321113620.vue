@@ -20,22 +20,26 @@ import ThreeDemo2 from './ThreeDemo2.vue';
   width: 100%;
   height: 100%;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
-  align-items: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   border-radius: 30px;
-  /* padding: 30px; */
+  margin: 10px;
 }
 
 .demo {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  margin: 20px 10px 20px 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
 }
 
 .demo2 {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  margin: 20px 20px 20px 10px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
 }
 </style>

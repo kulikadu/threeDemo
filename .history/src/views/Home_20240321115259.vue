@@ -20,6 +20,8 @@ import ThreeDemo2 from './ThreeDemo2.vue';
   width: 100%;
   height: 100%;
   display: flex;
+  /* flex: 1 1 auto; */
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
@@ -30,12 +32,22 @@ import ThreeDemo2 from './ThreeDemo2.vue';
 .demo {
   width: 50%;
   height: 100%;
-  margin: 20px 10px 20px 20px;
+  margin: 20 10 20 20;
+  /* width: 500px;
+  height: 500px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }
 
 .demo2 {
   width: 50%;
   height: 100%;
-  margin: 20px 20px 20px 10px;
+  margin: 20 20 20 10;
+  /* width: 500px;
+  height: 500px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }
 </style>

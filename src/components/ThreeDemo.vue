@@ -271,8 +271,20 @@ onMounted(() => {
   function onDocumentMouseUp(event) {
     isDragging = false;
   }
-
-
+  // 页面大小改变时，更新Stats的位置
+  const statsRePostion = () => {
+    // 获取元素的位置信息
+    var rect = threeDiv.getBoundingClientRect();
+    // 元素的屏幕坐标（相对于视口左上角）
+    var x = rect.left;
+    var y = rect.top;
+    // 设置Stats的位置为绝对定位
+    stats.domElement.style.position = 'absolute';
+    // 设置Stats的左边界距离父元素左边界的距离为10px
+    stats.domElement.style.left = x + 'px';
+    // 设置Stats的上边界距离父元素上边界的距离为50px
+    stats.domElement.style.top = y + 'px';
+  }
   // 页面大小改变时，更新渲染器的尺寸
   window.onresize = function () {
     rendererWidth = threeDiv.clientWidth;
@@ -281,20 +293,15 @@ onMounted(() => {
     console.log(rendererWidth, rendererHeight);
     camera.aspect = rendererWidth / rendererHeight;
     camera.updateProjectionMatrix();
+    statsRePostion();
+
   }
   const stats = new Stats();
   // 将渲染器DOM元素添加到DOM中
   if (threeDiv && renderer.domElement && WebGL.isWebGLAvailable()) {
     threeDiv.appendChild(renderer.domElement);
     threeDiv.appendChild(stats.domElement);
-    // 设置Stats的位置为绝对定位
-    stats.domElement.style.position = 'absolute';
-
-    // 设置Stats的左边界距离父元素左边界的距离为10px
-    stats.domElement.style.left = '10px';
-
-    // 设置Stats的上边界距离父元素上边界的距离为50px
-    stats.domElement.style.top = '50px';
+    statsRePostion();
     animate();
 
   } else if (!WebGL.isWebGLAvailable()) {

@@ -287,6 +287,14 @@ onMounted(() => {
   if (threeDiv && renderer.domElement && WebGL.isWebGLAvailable()) {
     threeDiv.appendChild(renderer.domElement);
     threeDiv.appendChild(stats.domElement);
+    // 设置Stats的位置为绝对定位
+    stats.domElement.style.position = 'absolute';
+
+    // 设置Stats的左边界距离父元素左边界的距离为10px
+    stats.domElement.style.left = '10px';
+
+    // 设置Stats的上边界距离父元素上边界的距离为50px
+    stats.domElement.style.top = '50px';
     animate();
 
   } else if (!WebGL.isWebGLAvailable()) {

@@ -29,6 +29,9 @@ coverage
 
 *.tsbuildinfo
 
+# history files
+.history/
+
 # 自动生成的文件
 src/auto-imports.d.ts
 src/components.d.ts

@@ -30,5 +30,5 @@ coverage
 *.tsbuildinfo
 
 # 自动生成的文件
-src/auto-imports.d.ts
-src/components.d.ts
+auto-imports.d.ts
+components.d.ts

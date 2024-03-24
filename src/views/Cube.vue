@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import ThreeDemo from '../components/ThreeDemo.vue';
-import ThreeDemo2 from '../components/ThreeDemo2.vue';
+import ThreeDemo from '../components/ThreeJS_demo/ThreeDemo.vue';
+import ThreeDemo2 from '../components/ThreeJS_demo/ThreeDemo2.vue';
 </script>
 
 <style scoped>

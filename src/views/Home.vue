@@ -4,36 +4,19 @@
       <el-aside width="200px" height="1000px">
         <el-scrollbar>
           <el-menu :default-openeds="['1']">
-            <el-sub-menu index="1">
-              <template #title>
-                <el-icon>
-                  <i-ep-message />
-                </el-icon>ThreeJsDemos
-              </template>
-              <el-menu-item index="1-1" @click="navigateTo('/cube')">Cube</el-menu-item>
-            </el-sub-menu>
-            <el-sub-menu index="2">
-              <template #title>
-                <el-icon><i-ep-menu /></el-icon>CesiumDemos
-              </template>
-              <el-menu-item index="2-1" @click="navigateTo('/CesiumDemos')">Cesium</el-menu-item>
-            </el-sub-menu>
-            <el-sub-menu index="3">
-              <template #title>
-                <el-icon>
-                  <i-ep-setting />
-                </el-icon>Icons
-              </template>
-              <el-menu-item index="3-1" @click="navigateTo('/icon')">Icons</el-menu-item>
-            </el-sub-menu>
-            <el-sub-menu index="4">
-              <template #title>
-                <el-icon>
-                  <i-ep-setting />
-                </el-icon>CanvasDemo
-              </template>
-              <el-menu-item index="3-1" @click="navigateTo('/CanvasDraw')">CanvasDraw</el-menu-item>
-            </el-sub-menu>
+            <div v-for="subMenu in submenuList" :key="subMenu.id">
+              <el-sub-menu>
+                <template #title>
+                  <el-icon>
+                    <i-ep-message />
+                  </el-icon>
+                  {{ subMenu.title }}
+                </template>
+                <el-menu-item v-for="subItem in subMenu.item" :key="subItem.id" :index="subItem.id" @click="navigateTo(subItem.path)">
+                  {{ subItem.name }}
+                </el-menu-item>
+              </el-sub-menu>
+            </div>
           </el-menu>
         </el-scrollbar>
       </el-aside>
@@ -48,7 +31,48 @@
 <script setup>
 import { useRouter } from 'vue-router'
 const router = useRouter()
-
+const submenuList = [
+  {
+    icon: 'i-ep-message ',
+    title: 'ThreeJsDemos',
+    item: [
+      {
+        name: 'Cube',
+        path: '/cube'
+      }
+    ]
+  },
+  {
+    icon: 'i-ep-menu',
+    title: 'CesiumDemos',
+    item: [
+      {
+        name: 'Cesium',
+        path: '/CesiumDemos'
+      }
+    ]
+  },
+  {
+    icon: 'i-ep-setting ',
+    title: 'Icons',
+    item: [
+      {
+        name: 'Icons',
+        path: '/icon'
+      }
+    ]
+  },
+  {
+    icon: 'i-ep-setting ',
+    title: 'CanvasDemo',
+    item: [
+      {
+        name: 'CanvasDraw',
+        path: '/CanvasDraw'
+      }
+    ]
+  }
+]
 // 声明一个通用的跳转函数，通过传入路径参数来实现页面跳转
 const navigateTo = (path) => {
   try {

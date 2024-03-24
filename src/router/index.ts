@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/cube',
       name: 'cube',
-      component: () => import('@/components/Cube.vue')
+      component: () => import('@/views/Cube.vue')
     },
     {
       path: '/demo',
@@ -32,13 +32,18 @@ const router = createRouter({
     {
       path: '/icon',
       name: 'icon',
-      component: () => import('../components/icon.vue')
+      component: () => import('../views/icon.vue')
     },
     {
       path: '/CanvasDraw',
       name: 'CanvasDraw',
-      component: () => import('../components/CanvasDraw.vue')
-    }
+      component: () => import('../views/CanvasDraw.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/404.vue'), // 你的 404 页面组件
+    },
   ]
 })
 

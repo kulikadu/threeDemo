@@ -6,6 +6,15 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
+    "tailwind.config.*",
+    "postcss.config.*",
+    // "src/**/*.ts",
+    // "src/**/*.d.ts",
+    // "src/**/*.tsx",
+    // "src/**/*.vue",
+    // "src/*.ts",
+    // "src/*.vue",
+    // "./vite.config.*"
   ],
   "compilerOptions": {
     "allowJs": true,
